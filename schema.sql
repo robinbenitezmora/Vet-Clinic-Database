@@ -9,3 +9,6 @@ CREATE TABLE animals (
     weigth_kg numeric(4,1) NOT NULL,
     CONSTRAINT animals_pkey PRIMARY KEY (id)
 );
+
+/*Add a column species of type string to your animals table*/
+ALTER TABLE animals ADD COLUMN species VARCHAR(50);
