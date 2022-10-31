@@ -189,3 +189,10 @@ WHERE D.name = 'Maisy Smith'
 GROUP BY S.name, D.Name
 ORDER BY COUNT(S.Name) DESC
 LIMIT 1;
+
+-- Checking the performance of the database
+SELECT COUNT(*) FROM visits where animals_id = 4;
+
+SELECT * FROM visits WHERE vets_id = 2;
+
+SELECT * FROM owners WHERE email = 'owner_18327@mail.com';

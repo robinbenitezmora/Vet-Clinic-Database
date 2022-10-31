@@ -143,6 +143,3 @@ VALUES ('2020-05-24', 1, 1), ('2020-07-22', 1, 3), ('2021-02-02', 2, 4),
 	INSERT INTO owners (full_name, email) 
 	SELECT 'Owner ' || generate_series(1, 2500000), 'owner_' 
 	|| generate_series(1, 2500000) || '@mail.com';
-
-	EXPLAIN ANALYZE SELECT COUNT(*) FROM visits WHERE animals_id = 4;
-	
