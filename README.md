@@ -21,6 +21,16 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Twitter: [@Mecanico_Robin](https://twitter.com/mecanico_robin)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/robin-benitez-mora/)
 
+👤 **Lucas Mullen**
+
+- GitHub: [@mullenlucas](https://github.com/mullenlucas/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mullenlucas/)
+
+👤 **Abdullateef Bello**
+
+- GitHub: [@Ibnballo1](https://github.com/Ibnballo1)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/abdullateef-bello/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
