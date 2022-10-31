@@ -130,3 +130,16 @@ VALUES ('2020-05-24', 1, 1), ('2020-07-22', 1, 3), ('2021-02-02', 2, 4),
 	('2020-10-03', 8, 4), ('2020-11-04', 8, 4), ('2019-01-24', 9, 2), 
   ('2019-05-15', 9, 2), ('2020-02-27', 9, 2), ('2020-08-03', 9, 2),
 	('2020-05-24', 10, 3),('2021-01-11', 10, 1);
+
+	-- This will add 11.861.143 visits considering you have 10 animals and 4 vets, 
+	-- and it will use around 87.000 timestamps (4 minutes aprox).
+	-- It took 14.433 seconds to run this query in my computer (3 times)
+	INSERT INTO visits (animals_id, vets_id, date_of_visit) 
+	SELECT * FROM 
+	(SELECT id FROM animals) animals_id, 
+	(SELECT id FROM vets) vets_id, generate_series('1980-01-01'::timestamp, '2021-01-01'::timestamp, '4 hours') visit_timestamp;
+
+	-- This will add 11.000.006 owners with full_name = 'Owner <X>' and email = 'owner_<X>@email.com' (12.764 seconds).
+	INSERT INTO owners (full_name, email) 
+	SELECT 'Owner ' || generate_series(1, 2500000), 'owner_' 
+	|| generate_series(1, 2500000) || '@mail.com';
