@@ -22,35 +22,14 @@ CREATE TABLE treatments(
   PRIMARY KEY (id)
 );
 
--- Remove column species
-ALTER TABLE animals DROP COLUMN species;
-
--- Add column species_id which is a foreign key referencing species table
-ALTER TABLE animals  ADD COLUMN species_id INT;
-ALTER TABLE animals ADD FOREIGN KEY (species_id)  REFERENCES species(id); 
-
--- Add column owner_id which is a foreign key referencing the owners table
-ALTER TABLE animals  ADD COLUMN owner_id INT;
-ALTER TABLE animals ADD FOREIGN KEY (owner_id)  REFERENCES owners(id); 
-
--- Create a table named vets with the following columns:
--- id: integer (set it as autoincremented PRIMARY KEY)
--- name: string
--- age: integer
--- date_of_graduation: date
-
-CREATE TABLE vets (
+CREATE TABLE invoices (
 	id INT GENERATED ALWAYS AS IDENTITY,
-	name VARCHAR(50),
-	age INT,
-	date_of_graduation DATE,
-	PRIMARY KEY(id)
+  total_amount DECIMAL(10,2),
+  generated_at TIMESTAMP,
+  paid_at TIMESTAMP,
+  medical_history_id INT,
+  PRIMARY KEY (id)
 );
-
--- There is a many-to-many relationship between the tables species and vets: 
--- a vet can specialize in multiple species, and a species can have multiple vets 
--- specialized in it. 
--- Create a "join table" called specializations to handle this relationship.
 
 CREATE TABLE specialization (
     id INT GENERATED ALWAYS AS IDENTITY,
