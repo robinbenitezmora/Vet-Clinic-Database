@@ -1,7 +1,7 @@
 # Vet Clinic Database
 
 > This is a database for a vet clinic. It contains information about animals and their owners.
-> It also contains information about the vets working at the clinic and the treatments they have performed.
+> It also contains information about the vets that are working in the clinic.
 
 
 ## Getting Started
