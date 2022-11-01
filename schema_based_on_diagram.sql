@@ -15,13 +15,11 @@ CREATE TABLE medical_histories(
   PRIMARY KEY (id)
 );
 
--- Create a table named species with the following columns:
--- id: integer (set it as autoincremented PRIMARY KEY)
--- name: string
-CREATE TABLE species(
+CREATE TABLE treatments(
   id   int GENERATED ALWAYS AS IDENTITY,
+  type  varchar,
   name  varchar,
-   PRIMARY KEY (id)	
+  PRIMARY KEY (id)
 );
 
 -- Remove column species
