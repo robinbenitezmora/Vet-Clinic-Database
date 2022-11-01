@@ -4,20 +4,14 @@ CREATE TABLE patients (
     id integer GENERATED ALWAYS AS IDENTITY,
     name character varying(50) NOT NULL,
     date_of_birth date NOT NULL,
+    PRIMARY KEY (id)
 );
 
-/*Add a column species of type string to your animals table*/
-ALTER TABLE animals ADD COLUMN species VARCHAR(50);
-
-/*Insert the following data:*/
--- Create a table named owners with the following columns:
--- id: integer (set it as autoincremented PRIMARY KEY)
--- full_name: string
--- age: integer
-CREATE TABLE owners(
+CREATE TABLE medical_histories(
   id   int GENERATED ALWAYS AS IDENTITY,
-  full_name  varchar,
-  age  int,
+  admitted_at  timestamp,
+  patient_id  int,
+  status  varchar,
   PRIMARY KEY (id)
 );
 
