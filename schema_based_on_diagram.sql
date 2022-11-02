@@ -18,14 +18,14 @@ CREATE TABLE medical_histories (
 );
 
 CREATE TABLE treatments (
-  id INT GENERATED ALWAYS AS IDENTITY,
+  id INT,
   type VARCHAR(50),
   name VARCHAR(50),
   PRIMARY KEY (id)
 );
 
 CREATE TABLE invoices (
-	id INT GENERATED ALWAYS AS IDENTITY,
+	id INT
   total_amount DECIMAL(10,2),
   generated_at TIMESTAMP,
   paid_at TIMESTAMP,
@@ -35,7 +35,7 @@ CREATE TABLE invoices (
 );
 
 CREATE TABLE invoice_items (
-    id INT GENERATED ALWAYS AS IDENTITY,
+    id INT,
     unit_price DECIMAL(10,2),
     quantity INT,
     total_price DECIMAL(10,2),
@@ -47,7 +47,7 @@ CREATE TABLE invoice_items (
 );
 
 CREATE TABLE medical_histories_treatments (
-  id INT GENERATED ALWAYS AS IDENTITY,
+  id INT,
   medical_history_id INT,
   treatment_id INT,
   FOREIGN KEY (medical_history_id) REFERENCES medical_histories(id),
