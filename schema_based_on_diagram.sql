@@ -1,14 +1,14 @@
 /* Database schema to keep the structure of entire database. */
 
 CREATE TABLE patients (
-    id INT GENERATED ALWAYS AS IDENTITY,
+    id INTEGER,
     name character VARCHAR(50) NOT NULL,
     date_of_birth date NOT NULL,
     PRIMARY KEY (id)
 );
 
 CREATE TABLE medical_histories (
-  id INT GENERATED ALWAYS AS IDENTITY,
+  id INTEGER,
   admitted_at TIMESTAMP NOT NULL,
   patient_id INT NOT NULL,
   status  VARCHAR(50) NOT NULL,
@@ -18,14 +18,14 @@ CREATE TABLE medical_histories (
 );
 
 CREATE TABLE treatments (
-  id INT,
+  id INTEGER,
   type VARCHAR(50),
   name VARCHAR(50),
   PRIMARY KEY (id)
 );
 
 CREATE TABLE invoices (
-	id INT
+	id INTEGER,
   total_amount DECIMAL(10,2),
   generated_at TIMESTAMP,
   paid_at TIMESTAMP,
@@ -35,7 +35,7 @@ CREATE TABLE invoices (
 );
 
 CREATE TABLE invoice_items (
-    id INT,
+    id INTEGER,
     unit_price DECIMAL(10,2),
     quantity INT,
     total_price DECIMAL(10,2),
@@ -47,7 +47,7 @@ CREATE TABLE invoice_items (
 );
 
 CREATE TABLE medical_histories_treatments (
-  id INT,
+  id INTEGER,
   medical_history_id INT,
   treatment_id INT,
   FOREIGN KEY (medical_history_id) REFERENCES medical_histories(id),
