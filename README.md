@@ -1,7 +1,6 @@
 # Vet Clinic Database
 
-> This is a database for a vet clinic. It contains information about animals and their owners.
-> It also contain information about the vets and the visits they have made to the animals.
+This is a veterinary clinic management application designed to streamline the appointment scheduling process and workflow management of veterinary clinics, using Ruby language and PostgreSQL database manager. This application is the perfect solution for managing a veterinary clinic.
 
 
 ## Getting Started
